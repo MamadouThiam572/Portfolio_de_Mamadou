@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mamadou Thiam — Portfolio Tech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Mamadou Thiam</h1>
+        <p>Aspirant <span id="typing-text"></span></p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Mes Projets</a>
+          <a href="#contact" class="btn btn-secondary">Me Contacter</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="profile-picture-container">
+          <img src="banniere.jpg" alt="Photo de Mamadou Thiam" class="profile-picture">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="container">
+      <h2>À Propos de Moi</h2>
+      <p>
+        Actuellement en formation pour devenir <strong>Technicien Supérieur en Systèmes, Réseaux et Télécommunications</strong> (niveau Licence 3), je construis ma carrière autour des infrastructures numériques. En parallèle, je me suis formé en <strong>autodidacte</strong> au développement web (Node.js, Express, React). Mon objectif est de devenir ingénieur en cybersécurité, en alliant mes compétences réseau et applicatives.
+      </p>
+    </section>
+
+    <section id="skills" class="container">
+      <h2>Compétences Techniques</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Réseaux & Systèmes</h3>
+          <ul>
+            <li><strong>Admin. Server :</strong> Windows Server 2019 (AD, DNS, DHCP, GPO), Linux (Ubuntu)</li>
+            <li><strong>Réseau :</strong> Routage & Switching (Basique), Audit, Modèle OSI/TCP-IP</li>
+            <li><strong>Virtualisation :</strong> VirtualBox, Docker (Notions)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Développement</h3>
+          <ul>
+            <li><strong>Backend :</strong> Node.js, Express.js, PHP</li>
+            <li><strong>Frontend :</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Bases de données :</strong> MongoDB (avec Mongoose), MySQL</li>
+            <li><strong>Autres langages :</strong> Python, C (via CS50)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Sécurité & Hardware</h3>
+          <ul>
+            <li><strong>Sécurité :</strong> Authentification JWT, Principes de cryptographie, Audit de base</li>
+            <li><strong>Hardware :</strong> Arduino (Projet RFID), Architecture des ordinateurs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="container">
+      <h2>Parcours & Progrès</h2>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-date">Fév. 2025 - Présent</div>
+          <div class="timeline-content">
+            <h3>Administration Windows Server</h3>
+            <p>Déploiement et gestion d'une infrastructure complète sous VirtualBox avec Active Directory, DNS, DHCP et GPO.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Jan. 2025 - Présent</div>
+          <div class="timeline-content">
+            <h3>Projet RFID avec Arduino</h3>
+            <p>Développement d'un système pour lire et écrire des informations sur des cartes RFID.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2024 - Présent</div>
+          <div class="timeline-content">
+            <h3>Formation CS50 de Harvard (en cours)</h3>
+            <p>Apprentissage des fondamentaux de l'informatique et de la programmation avec C et Python. Projets sur GitHub.</p>
+          </div>
+        </div>
+         <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h3>Projets Web en PHP/MySQL</h3>
+            <p>Création de plusieurs applications web dynamiques (gestion de stock, etc.) pour maîtriser le développement fullstack traditionnel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="container">
+      <h2>Certifications</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Passez au Full Stack avec Node.js, Express et MongoDB</h3>
+          <p>Délivré par <strong>OpenClassrooms</strong> en octobre 2025.</p>
+          <a href="6457590103.pdf" target="_blank" class="project-link">Voir le certificat →</a>
+          <span class="tag">Développement Web</span>
+        </div>
+        <div class="project-card">
+          <h3>Informatique et Internet</h3>
+          <p>Délivré par <strong>Programme FORCE-N</strong> en septembre 2025.</p>
+          <a href="Certificat.png" target="_blank" class="project-link">Voir le certificat →</a>
+          <span class="tag">Compétences Numériques</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projets Notables</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>API REST pour BlogSphere</h3>
+          <p>Contribution à une API sécurisée (Node.js/Express) pour un projet de hackathon, avec authentification JWT et gestion de fichiers.</p>
+          <a href="https://hackaton-jeemacoder3.vercel.app" target="_blank" class="project-link">Voir sur GitHub →</a>
+          <span class="tag">Backend</span>
+        </div>
+        <div class="project-card">
+          <h3>SnapShare</h3>
+          <p>Solution de transfert de fichiers en réseau local avec interface web et attribution d'IP automatique.</p>
+          <span class="tag">Réseau</span>
+        </div>
+        <div class="project-card">
+          <h3>Portfolio CS50</h3>
+          <p>Ensemble de mini-projets en C et Python (algorithmes, structures de données) réalisés dans le cadre de la formation CS50.</p>
+          <a href="https://github.com/code50/76973064" target="_blank" class="project-link">Voir sur GitHub →</a>
+          <span class="tag">Algo & C/Python</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>Une opportunité de stage ou un projet en tête ? N'hésitez pas à me contacter.</p>
+      <a href="mailto:thiammamadou2001@gmail.com" class="btn btn-primary">Envoyer un email</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mamadou Thiam. Conçu et développé avec passion.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
