@@ -52,6 +52,16 @@ body {
   z-index: 9999;
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
+
+/* Override container padding only inside the fixed nav to avoid large header block */
+.nav .container {
+  padding: 0.5rem 2rem; /* compact the nav vertically */
+}
+
+/* Ensure hero content is pushed below fixed nav */
+.hero {
+  padding-top: calc(64px + 1rem); /* space for fixed nav */
+}
 .nav-inner {
   display: grid;
   grid-template-columns: auto 1fr auto;
