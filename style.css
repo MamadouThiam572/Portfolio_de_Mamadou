@@ -20,6 +20,26 @@ body {
   line-height: 1.6;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  background: var(--accent1);
+  color: var(--background);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  z-index: 9999;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -144,6 +164,20 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+}
+
+.info-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.info-card {
+  background-color: var(--surface);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent1);
+  color: var(--text-secondary);
 }
 
 .skill-category {

@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let isDeleting = false;
 
   function type() {
+    if (!typingText) return; // guard if element missing
     const currentPhrase = phrases[phraseIndex];
     if (isDeleting) {
       typingText.textContent = currentPhrase.substring(0, charIndex - 1);
@@ -32,22 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  type();
+  if (typingText) type();
 
-  // Matrix effect on cube faces
-  const faces = document.querySelectorAll('.face');
-  const chars = '0123456789ABCDEF';
-
-  faces.forEach(face => {
-    for (let i = 0; i < 150; i++) {
-      const span = document.createElement('span');
-      span.textContent = chars[Math.floor(Math.random() * chars.length)];
-      span.style.position = 'absolute';
-      span.style.top = `${Math.random() * 100}%`;
-      span.style.left = `${Math.random() * 100}%`;
-      span.style.fontSize = `${Math.random() * 10 + 5}px`;
-      span.style.opacity = Math.random();
-      face.appendChild(span);
-    }
-  });
+  // Optional: matrix effect removed because no .face elements exist in HTML
+  // If you want the effect, add elements with class 'face' and re-enable this block.
 });

@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mamadou Thiam — Portfolio Tech</title>
+  <meta name="description" content="Mamadou Thiam — Étudiant L3 Systèmes, Réseaux et Télécommunications. Administrateur Windows Server, développeur web et passionné de cybersécurité.">
+  <meta property="og:title" content="Mamadou Thiam — Portfolio Tech">
+  <meta property="og:description" content="Étudiant L3 Systèmes, Réseaux et Télécommunications. Administrateur Windows Server, développeur web et passionné de cybersécurité.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="banniere.jpg">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="Certificat.png" type="image/png">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="hero">
     <div class="hero-content">
       <div class="hero-text">
         <h1>Mamadou Thiam</h1>
-        <p>Aspirant <span id="typing-text"></span></p>
+        <p>Aspirant <span id="typing-text" aria-live="polite"></span></p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">Mes Projets</a>
           <a href="#contact" class="btn btn-secondary">Me Contacter</a>
@@ -22,45 +29,79 @@
       </div>
       <div class="hero-visual">
         <div class="profile-picture-container">
-          <img src="banniere.jpg" alt="Photo de Mamadou Thiam" class="profile-picture">
+          <img src="banniere.jpg" srcset="banniere.jpg 1x" alt="Photo de Mamadou Thiam" class="profile-picture" loading="lazy" width="250" height="250">
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="about" class="container">
       <h2>À Propos de Moi</h2>
       <p>
-        Actuellement en formation pour devenir <strong>Technicien Supérieur en Systèmes, Réseaux et Télécommunications</strong> (niveau Licence 3), je construis ma carrière autour des infrastructures numériques. En parallèle, je me suis formé en <strong>autodidacte</strong> au développement web (Node.js, Express, React). Mon objectif est de devenir ingénieur en cybersécurité, en alliant mes compétences réseau et applicatives.
+        Je suis Mamadou Thiam, étudiant en Licence 3 Systèmes, Réseaux et Télécommunications à l’Université Alioune Diop de Bambey.
       </p>
+      <p>
+        Passionné par l’administration systèmes, les réseaux et la sécurité informatique, je développe mes compétences à travers des projets pratiques et des travaux techniques sur Windows Server, Linux et le développement web.
+      </p>
+      <p>
+        Autodidacte et rigoureux, je m’intéresse particulièrement aux infrastructures réseau, à la sécurisation des communications (SSL/TLS, certificats) et à la conception d’applications web orientées réseau. Mon objectif est de continuer à progresser techniquement et de participer à des projets concrets dans les domaines des systèmes, réseaux et de la cybersécurité.
+      </p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Informations générales</h3>
+          <ul>
+            <li><strong>Nom :</strong> Mamadou Thiam</li>
+            <li><strong>Niveau :</strong> Licence 3 (L3)</li>
+            <li><strong>Filière :</strong> Systèmes, Réseaux et Télécommunications (SRT)</li>
+            <li><strong>Université :</strong> Université Alioune Diop de Bambey</li>
+            <li><strong>Profil :</strong> Étudiant en Systèmes & Réseaux | Administrateur Windows Server | Développeur Web</li>
+            <li><strong>Statut :</strong> Autodidacte, passionné de technologie</li>
+            <li><strong>Personnalité :</strong> Logique, curieux, rigoureux (INTJ)</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="skills" class="container">
       <h2>Compétences Techniques</h2>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>Réseaux & Systèmes</h3>
+          <h3>Administration Systèmes</h3>
           <ul>
-            <li><strong>Admin. Server :</strong> Windows Server 2019 (AD, DNS, DHCP, GPO), Linux (Ubuntu)</li>
-            <li><strong>Réseau :</strong> Routage & Switching (Basique), Audit, Modèle OSI/TCP-IP</li>
-            <li><strong>Virtualisation :</strong> VirtualBox, Docker (Notions)</li>
+            <li>Windows Server 2019</li>
+            <li>Active Directory (domaines, utilisateurs, groupes, GPO)</li>
+            <li>Gestion des comptes et permissions</li>
+            <li>Audit, sécurité et sauvegarde</li>
+            <li>DNS, DHCP, IIS</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3>Développement</h3>
+          <h3>Réseaux & Sécurité</h3>
           <ul>
-            <li><strong>Backend :</strong> Node.js, Express.js, PHP</li>
-            <li><strong>Frontend :</strong> HTML, CSS, JavaScript</li>
-            <li><strong>Bases de données :</strong> MongoDB (avec Mongoose), MySQL</li>
-            <li><strong>Autres langages :</strong> Python, C (via CS50)</li>
+            <li>TCP/IP, LAN, WAN</li>
+            <li>Communication sécurisée (SSL / TLS)</li>
+            <li>Autorité de certification (racine et secondaire)</li>
+            <li>HTTPS avec Apache</li>
+            <li>VPN (Cloudflare WARP)</li>
+            <li>Bases de la cryptographie (OpenSSL)</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3>Sécurité & Hardware</h3>
+          <h3>Développement Web</h3>
           <ul>
-            <li><strong>Sécurité :</strong> Authentification JWT, Principes de cryptographie, Audit de base</li>
-            <li><strong>Hardware :</strong> Arduino (Projet RFID), Architecture des ordinateurs</li>
+            <li>Node.js, Express.js</li>
+            <li>MongoDB, Multer</li>
+            <li>API RESTful</li>
+            <li>Interfaces web locales</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Environnements & Outils</h3>
+          <ul>
+            <li>VirtualBox</li>
+            <li>Dual boot Windows / Ubuntu</li>
+            <li>Linux (Ubuntu)</li>
           </ul>
         </div>
       </div>
@@ -122,20 +163,25 @@
       <h2>Projets Notables</h2>
       <div class="projects-grid">
         <div class="project-card">
+          <h3>SnapShare</h3>
+          <p>Application web locale permettant le transfert de fichiers entre deux machines via un câble Ethernet. Objectif : simplifier le partage de données sans Internet et appliquer les concepts réseaux et web.</p>
+          <span class="tag">Node.js • Express • Réseau</span>
+        </div>
+        <div class="project-card">
           <h3>API REST pour BlogSphere</h3>
-          <p>Contribution à une API sécurisée (Node.js/Express) pour un projet de hackathon, avec authentification JWT et gestion de fichiers.</p>
-          <a href="https://hackaton-jeemacoder3.vercel.app" target="_blank" class="project-link">Voir sur GitHub →</a>
+          <p>Contribution à une API sécurisée (Node.js/Express) avec authentification JWT et gestion de fichiers pour un projet de hackathon.</p>
+          <a href="https://hackaton-jeemacoder3.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">Voir le projet →</a>
           <span class="tag">Backend</span>
         </div>
         <div class="project-card">
-          <h3>SnapShare</h3>
-          <p>Solution de transfert de fichiers en réseau local avec interface web et attribution d'IP automatique.</p>
-          <span class="tag">Réseau</span>
+          <h3>Projets académiques & TP</h3>
+          <p>Mise en place d’une autorité de certification, sécurisation d’un serveur Apache avec SSL (Certbot & DuckDNS), configuration HTTPS sous Linux et études sur la communication sécurisée.</p>
+          <span class="tag">Systèmes & Sécurité</span>
         </div>
         <div class="project-card">
           <h3>Portfolio CS50</h3>
           <p>Ensemble de mini-projets en C et Python (algorithmes, structures de données) réalisés dans le cadre de la formation CS50.</p>
-          <a href="https://github.com/code50/76973064" target="_blank" class="project-link">Voir sur GitHub →</a>
+          <a href="https://github.com/code50/76973064" target="_blank" rel="noopener noreferrer" class="project-link">Voir sur GitHub →</a>
           <span class="tag">Algo & C/Python</span>
         </div>
       </div>
@@ -144,7 +190,7 @@
     <section id="contact" class="container">
       <h2>Contact</h2>
       <p>Une opportunité de stage ou un projet en tête ? N'hésitez pas à me contacter.</p>
-      <a href="mailto:thiammamadou2001@gmail.com" class="btn btn-primary">Envoyer un email</a>
+      <a href="mailto:thiammamadou2001@gmail.com" class="btn btn-primary" aria-label="Envoyer un email à Mamadou">Envoyer un email</a>
     </section>
   </main>
 
