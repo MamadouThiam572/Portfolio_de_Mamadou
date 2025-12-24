@@ -37,4 +37,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Optional: matrix effect removed because no .face elements exist in HTML
   // If you want the effect, add elements with class 'face' and re-enable this block.
+
+  // Menu toggle (mobile)
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // Smooth scroll for internal links
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+  smoothLinks.forEach(link => {
+    link.addEventListener('click', function(e){
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')){
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // close mobile menu after click
+          if (navLinks && navLinks.classList.contains('open')){
+            navLinks.classList.remove('open');
+            if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      }
+    });
+  });
 });
