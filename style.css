@@ -63,7 +63,7 @@ body {
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
 }
-.social-links{ display:flex; gap:0.5rem; align-items:center; }
+.social-links{ display:flex; gap:0.5rem; align-items:center; margin-left: auto; }
 .social-links a{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:6px; background:rgba(255,255,255,0.03); color:var(--text-primary); text-decoration:none; font-weight:700; }
 .social-links a:hover{ transform:translateY(-2px); color:var(--accent2); }
 .nav-links {
@@ -71,8 +71,9 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
-  margin-left: auto;
-  flex-wrap: wrap;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
 }
 .nav-links a{
   color: var(--text-primary);
