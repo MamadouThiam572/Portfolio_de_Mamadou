@@ -67,4 +67,30 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Animate skill bars when visible
+  const skillFills = document.querySelectorAll('.skill-fill');
+  if (skillFills.length > 0) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const val = el.getAttribute('data-fill') || '70';
+          el.style.width = val + '%';
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.35 });
+    skillFills.forEach(f => observer.observe(f));
+  }
+
+  // LinkedIn share button
+  const lnBtn = document.getElementById('linkedin-share');
+  if (lnBtn) {
+    lnBtn.addEventListener('click', () => {
+      const url = encodeURIComponent(window.location.href);
+      const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+      window.open(shareUrl, '_blank', 'noopener,noreferrer,width=900,height=600');
+    });
+  }
 });

@@ -63,6 +63,9 @@ body {
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
 }
+.social-links{ display:flex; gap:0.5rem; align-items:center; }
+.social-links a{ display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border-radius:6px; background:rgba(255,255,255,0.03); color:var(--text-primary); text-decoration:none; font-weight:700; }
+.social-links a:hover{ transform:translateY(-2px); color:var(--accent2); }
 .nav-links {
   list-style: none;
   display: flex;
@@ -237,6 +240,21 @@ h2 {
   border-radius: 8px;
   border-left: 4px solid var(--accent1);
   color: var(--text-secondary);
+}
+
+/* Skill bars */
+.skill-bars{ margin: 1.25rem 0 2rem 0; display:flex; flex-direction:column; gap:0.75rem; }
+.skill-bar{ display:flex; flex-direction:column; gap:0.35rem; }
+.skill-label{ font-family: 'Roboto Mono', monospace; color:var(--accent1); font-weight:700; font-size:0.95rem; }
+.skill-track{ background: rgba(255,255,255,0.04); height:12px; border-radius:999px; overflow:hidden; }
+.skill-fill{ width:0%; height:100%; background: linear-gradient(90deg,var(--accent1),var(--accent2)); border-radius:999px; transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
+
+/* Print improvements */
+@media print{
+  body{ background: #fff; color:#000; }
+  a::after{ content: " (" attr(href) ")"; }
+  nav, .hero-visual, .menu-toggle, .social-links{ display:none !important; }
+  .container{ padding: 1rem; max-width: 100% }
 }
 
 .skill-category {
