@@ -93,9 +93,30 @@ body {
 
 @media (max-width: 880px){
   .menu-toggle{ display: block; }
-  .nav-links{ position: absolute; right: 1rem; top: 64px; background: var(--surface); flex-direction: column; padding: 1rem; border-radius: 8px; display: none; width: 200px; box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
-  .nav-links.open{ display: flex; }
-  .nav-inner{ padding: 0.5rem 1rem; }
+  .nav-inner{ position: relative; padding: 0.5rem 1rem; }
+  .nav-links{
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: var(--surface);
+    flex-direction: column;
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: none;
+    min-width: 220px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    z-index: 60;
+    transform-origin: top right;
+    transform: scaleY(0);
+    transition: transform 180ms ease, opacity 180ms ease;
+    opacity: 0;
+  }
+  .nav-links.open{
+    display: flex;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  .nav-links a{ display:block; padding: 0.5rem 0.75rem; width:100%; }
 }
 
 .container {
