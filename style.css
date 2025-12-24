@@ -71,6 +71,8 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-left: auto;
+  flex-wrap: wrap;
 }
 .nav-links a{
   color: var(--text-primary);
@@ -89,6 +91,7 @@ body {
   color: var(--text-primary);
   border: none;
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 @media (max-width: 880px){
@@ -117,6 +120,7 @@ body {
     opacity: 1;
   }
   .nav-links a{ display:block; padding: 0.5rem 0.75rem; width:100%; }
+  .nav-links li{ list-style:none; }
 }
 
 .container {
