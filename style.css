@@ -264,97 +264,60 @@ body {
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  margin-top: 2rem; /* Add some space from the title */
 }
 
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: start;
-  margin-top: 2rem;
-}
-
-.about-text p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-}
-
-#about h2 + .about-grid .about-text p:first-child {
-    font-size: 1.1rem;
-    color: var(--text-primary);
-}
-
-
-.info-card {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  color: var(--text-secondary);
-}
-
-.info-card h3 {
-  font-size: 1.2rem;
-  color: var(--accent1);
-  font-family: 'Roboto Mono', monospace;
-  margin-bottom: 1rem;
-}
-
-.info-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.info-card li {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
-
-/* Skill bars */
-.skill-bars{ margin: 1.25rem 0 2rem 0; display:flex; flex-direction:column; gap:0.75rem; }
-.skill-bar{ display:flex; flex-direction:column; gap:0.35rem; }
-.skill-label{ font-family: 'Roboto Mono', monospace; color:var(--accent1); font-weight:700; font-size:0.95rem; }
-.skill-track{ background: rgba(255,255,255,0.04); height:12px; border-radius:999px; overflow:hidden; }
-.skill-fill{ width:0%; height:100%; background: linear-gradient(90deg,var(--accent1),var(--accent2)); border-radius:999px; transition: width 1.2s cubic-bezier(.2,.8,.2,1); }
-
-/* Print improvements */
-@media print{
-  body{ background: #fff; color:#000; }
-  a::after{ content: " (" attr(href) ")"; }
-  nav, .hero-visual, .menu-toggle, .social-links{ display:none !important; }
-  .container{ padding: 1rem; max-width: 100% }
+/* Skill bars are hidden for a cleaner look */
+.skill-bars { 
+  display: none; 
 }
 
 .skill-category {
   background-color: var(--surface);
-  padding: 2rem;
-  border-radius: 10px;
-  border-left: 3px solid var(--accent2);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 .skill-category h3 {
-  margin-bottom: 1rem;
-  color: var(--accent2);
+  margin-bottom: 1.5rem;
+  color: var(--accent1);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0, 255, 153, 0.2);
+  padding-bottom: 0.5rem;
 }
 
 .skill-category ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; /* spacing between badges */
 }
 
 .skill-category li {
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
+  background-color: rgba(0, 170, 255, 0.1);
+  color: var(--accent2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 170, 255, 0.2);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.skill-category li:hover {
+  background-color: rgba(0, 170, 255, 0.2);
+  color: #fff;
 }
 
 /* Projects Section */
