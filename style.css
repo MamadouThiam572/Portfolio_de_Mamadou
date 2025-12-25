@@ -264,14 +264,84 @@ body {
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 2rem; /* Add some space from the title */
 }
+
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+#about h2 + .about-grid .about-text p:first-child {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+
+.info-card {
+  background-color: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.info-card h3 {
+  font-size: 1.1rem; /* harmoniser avec skill-category h3 */
+  color: var(--accent1);
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 1.5rem; /* harmoniser */
+  border-bottom: 1px solid rgba(0, 255, 153, 0.2); /* harmoniser */
+  padding-bottom: 0.5rem; /* harmoniser */
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  font-size: 0.95rem; /* légèrement plus grand */
+  margin-bottom: 0.75rem; /* un peu plus d'espace */
+  color: var(--text-secondary);
+}
+
+.info-card li strong {
+  color: var(--text-primary); /* Rendre les labels plus visibles */
+  min-width: 80px; /* Aligner un peu le texte */
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 
 /* Skill bars are hidden for a cleaner look */
 .skill-bars { 
   display: none; 
+}
+
+/* Print improvements */
+@media print{
+  body{ background: #fff; color:#000; }
+  a::after{ content: " (" attr(href) ")"; }
+  nav, .hero-visual, .menu-toggle, .social-links{ display:none !important; }
+  .container{ padding: 1rem; max-width: 100% }
 }
 
 .skill-category {
