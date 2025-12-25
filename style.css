@@ -132,20 +132,57 @@ body {
       margin: 0 auto;
       padding: 4rem 2rem;
     }
-.btn-primary:hover {
-  background-color: var(--accent2);
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Roboto Mono', monospace;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid transparent; /* Reserve space for border */
 }
 
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 255, 153, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 255, 153, 0.15);
+}
+
+/* --- Primary Button --- */
+.btn-primary {
+  background-color: var(--accent1);
+  color: var(--background);
+  border-color: var(--accent1);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent2);
+  border-color: var(--accent2);
+  color: var(--background);
+  box-shadow: 0 4px 20px rgba(0, 170, 255, 0.25);
+}
+
+/* --- Secondary Button --- */
 .btn-secondary {
   background-color: transparent;
   color: var(--accent1);
-  border: 2px solid var(--accent1);
+  border-color: var(--accent1);
 }
 
 .btn-secondary:hover {
   background-color: var(--accent1);
   color: var(--background);
 }
+
 
 /* Hero Section */
 .hero {
