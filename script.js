@@ -93,4 +93,18 @@ document.addEventListener('DOMContentLoaded', function() {
       window.open(shareUrl, '_blank', 'noopener,noreferrer,width=900,height=600');
     });
   }
+
+  // Animate timeline items on scroll
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  if (timelineItems.length > 0) {
+    const timelineObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    timelineItems.forEach(item => timelineObserver.observe(item));
+  }
 });
