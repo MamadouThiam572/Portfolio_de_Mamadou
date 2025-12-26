@@ -562,3 +562,48 @@ footer {
     font-size: 3rem;
   }
 }
+/* Styling for details/summary in project cards */
+.project-card details {
+    margin-top: 1rem;
+}
+
+.project-card summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--accent1);
+    outline: none; /* Remove default focus outline */
+}
+
+.project-card summary::marker {
+    color: var(--accent1);
+}
+
+.project-card summary:hover {
+    text-decoration: underline;
+}
+
+.project-card details[open] summary {
+    margin-bottom: 0.5rem;
+}
+
+.project-card details div {
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent2);
+}
+
+.project-card details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 0.5rem;
+    display: block; /* override other ul styles if necessary */
+}
+
+.project-card details li {
+    margin-bottom: 0.25rem;
+    color: var(--text-secondary);
+    background-color: transparent; /* override other li styles */
+    border: none; /* override other li styles */
+    padding: 0; /* override other li styles */
+    font-size: 0.9rem; /* adjust font size */
+}
+
