@@ -607,3 +607,18 @@ footer {
     font-size: 0.9rem; /* adjust font size */
 }
 
+
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn svg {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
